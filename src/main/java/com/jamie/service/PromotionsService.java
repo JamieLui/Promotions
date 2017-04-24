@@ -1,16 +1,12 @@
 package com.jamie.service;
 
-import com.jamie.model.Product;
 import com.jamie.model.promotions.CheckoutPromotion;
 import com.jamie.model.promotions.ProductPromotion;
 import com.jamie.repository.CheckoutPromotionRepository;
 import com.jamie.repository.ProductPromotionRepository;
-import com.jamie.repository.ProductRepository;
-import com.jamie.service.promotions.PromotionUtils;
 import org.springframework.stereotype.Service;
 
 import javax.xml.bind.ValidationException;
-import java.math.BigDecimal;
 import java.util.Optional;
 
 

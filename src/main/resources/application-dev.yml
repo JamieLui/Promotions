@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:checkout;DB_CLOSE_ON_EXIT=FALSE
+    username:
+    password:
+    driverClassName: org.h2.Driver
+    validation-query: SELECT 1 FROM INFORMATION_SCHEMA.SYSTEM_USERS
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show_sql: true
+
+drumbeat:
+  backend: logging
+
+swagger.enabled: true

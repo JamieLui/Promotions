@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <changeSet id="initial schema" author="Jamie Lui">
+
+        <createTable tableName="checkout_promotion">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="percentage_discount" type="int(11)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="minimum_amount_spent" type="DECIMAL">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="product_promotion">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="product_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="amount_required_for_promotion" type="int(11)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="new_product_price" type="DECIMAL">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

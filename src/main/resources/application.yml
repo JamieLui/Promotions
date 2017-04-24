@@ -1,0 +1,32 @@
+info.app:
+  name: Checkout
+  description: Jamie's Checkout
+  version: V1
+
+# Database connection configuration
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    driverClassName: com.mysql.jdbc.Driver
+    validation-query: SELECT 1
+    # Number of seconds to wait before the validation query fails
+    validation-query-timeout: 30
+    # Whether connection validation should occur while the connection is idle
+    test-while-idle: true
+    # Number of milliseconds between the runs through the DB connection pool looking for connections to validate or remove
+    time-between-eviction-runs-millis: 300000
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    generate-ddl: false
+    hibernate.ddl-auto: none
+  jackson.serialization.write_dates_as_timestamps: false
+
+swagger:
+  # Whether Swagger documentation should be enabled or not
+  enabled: true
+  ui-version: @swagger-ui.version@
+
+# Liquibase configuration file location
+liquibase.change-log: classpath:/db/changelog/db-changelog.xml

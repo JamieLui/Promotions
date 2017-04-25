@@ -16,10 +16,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories
 @EnableSwagger2
 @SpringBootApplication
-public class CheckoutApplication {
+public class PromotionsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CheckoutApplication.class, args);
+		SpringApplication.run(PromotionsApplication.class, args);
 	}
 
 	@Bean

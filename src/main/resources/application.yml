@@ -9,7 +9,7 @@ spring:
     url:
     username:
     password:
-    driverClassName: com.mysql.jdbc.Driver
+    driverClassName: org.h2.Driver
     validation-query: SELECT 1
     # Number of seconds to wait before the validation query fails
     validation-query-timeout: 30

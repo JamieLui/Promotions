@@ -34,7 +34,7 @@ public class ProductPromotion {
     public void setId(final String id) throws ValidationException {
 
         if (id == null || id.isEmpty()) {
-            throw new ValidationException("Product can not be null");
+            throw new ValidationException("Id can not be null");
         }
 
         this.id = id;
@@ -46,8 +46,8 @@ public class ProductPromotion {
 
     public void setProductId(final String productId) throws ValidationException {
 
-        if (productId == null) {
-            throw new ValidationException("Product can not be null");
+        if (productId == null || productId.isEmpty()) {
+            throw new ValidationException("ProductId can not be null or empty");
         }
 
         this.productId = productId;

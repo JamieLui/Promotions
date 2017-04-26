@@ -31,7 +31,7 @@ public class CheckoutPromotion {
     public void setId(final String id) throws ValidationException {
 
         if (id == null || id.isEmpty()) {
-            throw new ValidationException("Product can not be null");
+            throw new ValidationException("Product can not be null or empty");
         }
 
         this.id = id;

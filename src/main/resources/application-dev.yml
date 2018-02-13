@@ -9,7 +9,4 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     show_sql: true
 
-drumbeat:
-  backend: logging
-
 swagger.enabled: true
